@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type fb struct {
 	Name         string
 	Count, Every uint
@@ -33,13 +31,13 @@ func main() {
 		number := true
 		for n := range fbs {
 			if fbs[n].Run() {
-				fmt.Print(fbs[n].Name)
+				print(fbs[n].Name)
 				number = false
 			}
 		}
 		if number {
-			fmt.Print(i)
+			print(i)
 		}
-		fmt.Println()
+		print("\n")
 	}
 }
