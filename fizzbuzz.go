@@ -13,7 +13,7 @@ func NewFB(name string, every uint) fb {
 	}
 }
 
-func (f *fb) Run() bool {
+func (f *fb) Next() bool {
 	f.Count--
 	if f.Count == 0 {
 		f.Count = f.Every
@@ -30,7 +30,7 @@ func main() {
 	for i := 1; i < 1000; i++ {
 		number := true
 		for n := range fbs {
-			if fbs[n].Run() {
+			if fbs[n].Next() {
 				print(fbs[n].Name)
 				number = false
 			}
