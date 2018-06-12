@@ -1,11 +1,11 @@
-package main
+package main // import "vimagination.zapto.org/fizzbuzz"
 
 type fb struct {
 	Name         string
 	Count, Every uint
 }
 
-func NewFB(name string, every uint) fb {
+func newFB(name string, every uint) fb {
 	return fb{
 		Name:  name,
 		Count: every,
@@ -24,8 +24,8 @@ func (f *fb) Next() bool {
 
 func main() {
 	fbs := [...]fb{
-		NewFB("Fizz", 3),
-		NewFB("Buzz", 5),
+		newFB("Fizz", 3),
+		newFB("Buzz", 5),
 	}
 	for i := 1; i < 1000; i++ {
 		number := true
